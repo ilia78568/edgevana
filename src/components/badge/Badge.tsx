@@ -6,11 +6,12 @@ interface IProps {
     title: string
     description: string
     onClick: () => void
+    className?: string
 }
 
-export const Badge: React.FC<IProps> = ({svg, title, description, onClick}) => {
+export const Badge: React.FC<IProps> = ({svg, title, description, onClick, className}) => {
     return (
-        <div className={styles.badge} onClick={onClick}>
+        <div className={styles.badge + ' ' + className} onClick={onClick}>
             <div>
                 <img src={svg?.src}></img>
             </div>

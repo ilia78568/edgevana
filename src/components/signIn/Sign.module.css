@@ -1,0 +1,53 @@
+.title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  color: #151F4E;
+}
+
+.subtitle {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #838AA9;
+  margin: 5px 0 40px 0;
+}
+
+.signupMain {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.blockInputs {
+  display: flex;
+}
+
+.lastName {
+  margin-left: 16px;
+}
+
+.userName, .email, .password {
+  margin-top: 20px;
+}
+
+.occupancyBlock {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.occupancyBlock > div {
+  width: 122px;
+  height: 6px;
+  background: #EEF1FE;
+  border-radius: 35px;
+}
+
+.filled {
+  background: linear-gradient(90deg, #5268D3 0%, #435ACB 100%) !important;
+}

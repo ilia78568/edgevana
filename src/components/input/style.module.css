@@ -1,0 +1,44 @@
+.label {
+    position: relative;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #151F4E;
+}
+
+.input {
+    width: 100%;
+
+    background: #F3F4F9;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 18px 17px;
+    box-sizing: border-box;
+    color: #838AA9;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+
+
+    margin-top: 8px;
+}
+
+.input::placeholder {
+    opacity: 0.5;
+     color: #838AA9;
+}
+
+.passSvg {
+    position: absolute;
+    top: 75%;
+    left: 91%;
+    cursor: pointer;
+}
