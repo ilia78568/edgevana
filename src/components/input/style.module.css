@@ -1,6 +1,5 @@
 .label {
     position: relative;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -27,13 +26,12 @@
     font-size: 14px;
     line-height: 17px;
 
-
     margin-top: 8px;
 }
 
 .input::placeholder {
     opacity: 0.5;
-     color: var(--secondary);
+    color: var(--secondary);
 }
 
 .passSvg {

@@ -9,13 +9,10 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
-
     cursor: pointer;
     background: var(--primary-light);
     border-radius: 8px;
-
     padding: 17px 0;
-
     outline: none;
     border: none;
 }

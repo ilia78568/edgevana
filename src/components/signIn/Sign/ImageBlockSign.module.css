@@ -31,10 +31,6 @@
 .mainRight__img1 {
   width: 625px;
   height: 411px;
-  /* position: absolute;
-  z-index: 1;
-  left: 70px */
-
 }
 .mainRight__img2 {
   width: 158px;
@@ -54,7 +50,9 @@
   text-decoration: none;
   color: var(--primary-light);
 }
-
+.linkRules:hover {
+  color: var(--primary);
+}
 @media(max-width: 1100px){
   .mainRight {
     display: none;

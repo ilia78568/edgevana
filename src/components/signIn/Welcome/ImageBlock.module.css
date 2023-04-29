@@ -1,7 +1,6 @@
 .mainRight {
   width: 50%;
   position: relative;
-
   display: flex;
 }
 
@@ -80,7 +79,6 @@
   margin-right: 3px;
   color:  var(--secondary-500);
 }
-
 
 @media(max-width: 1100px){
   .mainRight {

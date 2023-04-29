@@ -65,7 +65,7 @@
 .logoBlock {
   display: flex;
   width: 100%;
-  align-items: start;
+  align-items: flex-start;
 }
 .logo {
   margin: 24px;
@@ -80,6 +80,10 @@
 .link {
   text-decoration: none;
   color: var(--primary-light);
+}
+
+.link:hover {
+  color: var(--primary);
 }
 
 .linkText {

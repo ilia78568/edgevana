@@ -141,11 +141,14 @@ export const Sign = () => {
                 value={privacy}
                 onChange={() => setPrivacy(!privacy)}
                 checked={privacy}
-                label={<p>I certify that i am 18 years of age or older, i agree to the to Edgevana`s <a className={styles.linkRules} href='/'>Terms of Use</a>, and i have read the <a className={styles.linkRules} >Privacy Policy</a>.</p>} 
+                label={
+                    <p>I certify that I am 18 years of age or older, I agree to the to Edgevana`s &nbsp;
+                        <a className={styles.linkRules} href='/'>Terms of Use</a>
+                        , and i have read the <a className={styles.linkRules} >Privacy Policy</a>.
+                    </p>
+                } 
             />
-
             <Button className={styles.btnSign} title='Sign Up' onClick={submitInfo} type='submit' disabled={!privacy}/>
-
             <div className={styles.link} ><a className={styles.linkRules}  href='/'>Sign up</a> for business account</div>
           </form>
     )

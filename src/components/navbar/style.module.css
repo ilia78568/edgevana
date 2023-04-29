@@ -77,12 +77,10 @@
 
 .logOut {
     margin-left: 28px;
-    
 }
 .logOut:hover {
     cursor: pointer;
-    border-radius: 50%;
-    
+    transform: scale(1.12);
 }
 .switcher {
     display: flex;

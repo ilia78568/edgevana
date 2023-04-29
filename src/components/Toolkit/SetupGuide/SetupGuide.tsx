@@ -1,7 +1,7 @@
 
 import React, { useRef, useState } from 'react'
-import styles from './SetupGuide.module.css'
 import { Button } from '@/components/button/Button'
+import styles from './SetupGuide.module.css'
 
 interface IQuestion {
     id: string
@@ -40,6 +40,8 @@ const questions = [
 export const SetupGuide: React.FC = () => {
     
     const [questionNum, setQuestionNum] = useState(1)
+    const [first, setFirst] = useState('High Performant Validator')
+    const [second, setSecond] = useState('QuickNode')
 
     const next = () => {
         if (questionNum > 1) {
@@ -48,10 +50,6 @@ export const SetupGuide: React.FC = () => {
         setQuestionNum(questionNum + 1)
     }
 
-    const [first, setFirst] = useState('High Performant Validator')
-    const [second, setSecond] = useState('QuickNode')
-
-
     const renderQuestion = () => {
         switch(questionNum) {
             case 1: {
@@ -59,8 +57,8 @@ export const SetupGuide: React.FC = () => {
                     id={questions[0].id} 
                     main={questions[0].main} 
                     answers={questions[0].answers} 
-                    value={second}
-                    changeValue={setSecond}
+                    value={first}
+                    changeValue={setFirst}
                 />
             }
             case 2: {

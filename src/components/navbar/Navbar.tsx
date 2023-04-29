@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/router'
 
 import NodesSvg from '@/assets/images/toolkit/Server.svg'
 import DashboardSvg from '@/assets/images/toolkit/dashboard.svg'
@@ -16,12 +17,6 @@ import SunSvg from '@/assets/images/toolkit/sun.svg'
 import MoonSvg from '@/assets/images/toolkit/moon.svg'
 
 import styles from './style.module.css'
-import { useRouter } from 'next/router'
-
-
-interface IProps {
-   
-}
 
 interface ILinkComponent {
    src: string
@@ -63,15 +58,17 @@ const LINKS = [
     },
 ]
 
-export const Navbar: React.FC<IProps> = ({  }) => {
+export const Navbar: React.FC = () => {
     const pathname = usePathname();
-
-    const [isSwitch, setIsSwitch] = useState(false)
     const { push } = useRouter();
+
+    const [isSwitch, setIsSwitch] = useState(true)
+    
     const logout = () => {
         localStorage.removeItem('login')
         push('/sign-up');
     }
+    
     return (
         <div className={styles.nav}>
             <div>

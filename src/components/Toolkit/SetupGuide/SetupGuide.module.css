@@ -71,6 +71,9 @@
   margin-bottom: 25px;
   cursor: pointer;
 }
+.label:hover {
+  opacity: 1;
+}
 .selected {
   opacity: 1;
 }
