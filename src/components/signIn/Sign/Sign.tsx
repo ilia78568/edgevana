@@ -1,13 +1,14 @@
-import styles from './Sign.module.css'
+import { useState } from 'react'
 
 import { Input } from '../../input/Input'
-import { useState } from 'react'
 import { Checkbox } from '../../checkbox/Checkbox'
 import { Button } from '../../button/Button'
 
-const emailregex = /^(.+)@(.+)$/iu;
+import styles from './Sign.module.css'
 
-export const Sign = ({answ}: any) => {
+const emailRegex = /^(.+)@(.+)$/iu;
+
+export const Sign = () => {
 
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
@@ -41,7 +42,7 @@ export const Sign = ({answ}: any) => {
             setErrors(prev => ({...prev, lastName: true}))
             return
         }
-        if(!email || emailregex.test(email)) {
+        if(!email || emailRegex.test(email)) {
             setErrors(prev => ({...prev, email: true}))
             return
         }
@@ -64,7 +65,6 @@ export const Sign = ({answ}: any) => {
         } );
 
         const answ = await res.json();
-
 
         if (answ.message) {
             alert(answ.message)

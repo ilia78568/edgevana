@@ -56,4 +56,16 @@
     --parrot: #7afa11;
     --pink: #dc1480;
     --purple: #8752f3;
+
+    --arrow-color: #2B3E9B;
+    --occupancy-color: #EEF1FE;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--primary-light);
+  }
+
+  a:hover {
+    color: var(--primary);
   }

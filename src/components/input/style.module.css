@@ -7,19 +7,19 @@
     font-size: 14px;
     line-height: 17px;
 
-    color: #151F4E;
+    color: var(--primary);
 }
 
 .input {
     width: 100%;
 
-    background: #F3F4F9;
+    background: var(--grey);
     border-radius: 8px;
     border: none;
     outline: none;
     padding: 18px 17px;
     box-sizing: border-box;
-    color: #838AA9;
+    color: var(--secondary);
 
     font-family: 'Inter';
     font-style: normal;
@@ -33,7 +33,7 @@
 
 .input::placeholder {
     opacity: 0.5;
-     color: #838AA9;
+     color: var(--secondary);
 }
 
 .passSvg {

@@ -11,58 +11,6 @@
   justify-content: space-between;
 }
 
-.mainRight {
-  width: 50%;
-  position: relative;
-
-  display: flex;
-}
-
-.mainRight__img1 {
-  width: 730px;
-  height: 568px;
-  position: absolute;
-  z-index: 1;
-  left: 70px
-
-}
-.mainRight__img2 {
-  width: 225px;
-  height: 406px;
-  position: absolute;
-  top: 200px;
-  z-index: 2;
-}
-.imagesBlock {
-  margin-top: 50px;
-  position: relative;
-}
-.title {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 31px;
-  color: #151F4E;
-}
-
-.subtitle {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 18px;
-  color: #838AA9;
-  margin: 5px 0 40px 0;
-}
-
-.signupMain {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-
-}
-
 .logoBlock {
   display: flex;
   width: 100%;
@@ -74,25 +22,6 @@
   width: 171px;
 }
 
-.secondBadge {
-  margin: 20px 0 40px 0;
-}
-
-.link {
-  text-decoration: none;
-  color: #2B3E9B;
-}
-
-.linkText {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
-  color: #838AA9;
-  margin-top: 30px;
-}
-
 .footer {
   padding-bottom: 30px;
 
@@ -102,62 +31,22 @@
   font-size: 12px;
   line-height: 15px;
 
-  color: #838AA9;
+  color: var(--secondary);
 }
 
-.acceleratingText {
-  display: flex;
-  align-items: flex-end;
-  padding: 50px;
 
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 27px;
-
-  color: #151F4E;
+@media(max-width: 1100px){
+  .mainLeft {
+    width: 100%;
+  }
 }
 
-.acceleratingText > div:nth-child(1) {
-  display: flex;
-}
-.acceleratingText__text {
-  display: flex;
-  flex-direction: column;
-}
+@media(max-width: 470px){
+  .mainLeft {
+    padding: 20px;
+  }
 
-.acceleratingText__text > div:nth-child(2) {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-
-  margin-top: 12px;
-}
-
-.acceleratingText__arrows {
-  display: flex;
-}
-
-.acceleratingText__arrows div {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #2B3E9B;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.acceleratingText__arrows div:nth-child(1) {
-  border: 1px solid #4B516A;
-  margin-right: 10px;
-}
-
-.firstArrow {
-  transform: rotate(180deg);
-  margin-right: 3px;
-  color: #4B516A;
+  .footer {
+    margin-top: 20px;
+  }
 }

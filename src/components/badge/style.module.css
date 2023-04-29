@@ -7,7 +7,7 @@
     font-weight: 400;
     font-style: normal;
 
-    border: 1.5px solid #123FD2;
+    border: 1.5px solid var(--primary-light);
     border-radius: 8px;
     
 }
@@ -21,18 +21,22 @@
 .title {
     font-size: 16px;
     font-weight: 600;
-    color: #151F4E;
+    color: var(--primary);
 }
 .descr {
     margin-top: 10px;
     font-size: 14px;
 
-    color: #838AA9;
+    color: var(--secondary);
     line-height: 24px;
     letter-spacing: 0.05em;
 }
 
 .badge:hover {
-    background: #F3F4F9;
+    background: var(--grey);
     cursor: pointer;
+}
+
+.active {
+    background: var(--grey);
 }

@@ -8,11 +8,11 @@
 .checkbox {
     width: 42px;
     height: 24px;
-    accent-color: #151F4E;
+    accent-color: var(--primary);
 }
 
 .checkbox:hover {
-    background-color: #151F4E;
+    background-color: var(--primary);
 }
 .label {
     margin-left: 20px;

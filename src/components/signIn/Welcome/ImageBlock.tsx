@@ -1,8 +1,8 @@
 import GeneralImage from '@/assets/images/signUp/generalInfo.png'
 import ChatsImage from '@/assets/images/signUp/Chats.png'
 import ArrowSvg from '@/assets/images/signUp/arrow.svg'
-import styles from './ImageBlock.module.css'
 
+import styles from './ImageBlock.module.css'
 
 export const ImageBlock = () => {
     return (

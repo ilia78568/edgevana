@@ -11,7 +11,7 @@
     line-height: 17px;
 
     cursor: pointer;
-    background: #2B3E9B;
+    background: var(--primary-light);
     border-radius: 8px;
 
     padding: 17px 0;

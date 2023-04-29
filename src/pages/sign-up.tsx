@@ -1,15 +1,18 @@
-import LogoSvg from '@/assets/images/signUp/logo.svg'
+import { useState } from 'react';
 
-import styles from '@/styles/SignUp.module.css'
 import { Welcome } from "@/components/signIn/Welcome/Welcome";
 import { Sign } from "@/components/signIn/Sign/Sign";
 import { ImageBlock } from "@/components/signIn/Welcome/ImageBlock";
 import { ImageBlockSign } from "@/components/signIn/Sign/ImageBlockSign";
-import { useState } from "react";
+
+import LogoSvg from '@/assets/images/signUp/logo.svg'
+
+import styles from '@/styles/SignUp.module.css'
+
 
 export default function SignUp() {
     
-  const [isSign, setIsSign] = useState(true)
+  const [isSign, setIsSign] = useState(false)
 
   return (
     <div className={styles.main}>

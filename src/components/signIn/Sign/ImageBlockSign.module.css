@@ -49,3 +49,9 @@
   padding-bottom: 190px;
   position: relative;
 }
+
+@media(max-width: 1100px){
+  .mainRight {
+    display: none;
+  }
+}

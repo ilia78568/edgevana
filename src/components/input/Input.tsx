@@ -1,7 +1,6 @@
-import React, { useState } from "react"
-import styles from './style.module.css'
+import React, { useState } from 'react'
 import PasswordSvg from '@/assets/images/signUp/password.svg'
-
+import styles from './style.module.css'
 
 interface IProps {
     value: string
@@ -35,7 +34,7 @@ export const Input: React.FC<IProps> = ({ disableError, isError, value, placehol
                  placeholder={placeholder}
                  onChange={onChangeHandler} 
                  type={type === 'password' ? passType : type }
-                />
+            />
                 {type === 'password' && <img onClick={() => setShow(!show)} className={styles.passSvg} src={PasswordSvg.src}></img>}
             </label>
         </div>
