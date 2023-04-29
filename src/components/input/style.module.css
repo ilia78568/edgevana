@@ -42,3 +42,7 @@
     left: 91%;
     cursor: pointer;
 }
+
+.error {
+    border: 1px solid var(--danger)
+}

@@ -1,0 +1,25 @@
+.block {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+    cursor: pointer
+}
+
+.checkbox {
+    width: 42px;
+    height: 24px;
+    accent-color: #151F4E;
+}
+
+.checkbox:hover {
+    background-color: #151F4E;
+}
+.label {
+    margin-left: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+}

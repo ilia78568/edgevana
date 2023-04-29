@@ -1,7 +1,7 @@
 .main {
   display: flex;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .mainLeft {
   width: 50%;
@@ -107,7 +107,7 @@
 
 .acceleratingText {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   padding: 50px;
 
   font-family: 'Inter';

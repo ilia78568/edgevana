@@ -3,10 +3,14 @@ import BusinessSvg from '@/assets/images/signUp/business.svg'
 
 import styles from './Welcome.module.css'
 
-import { Badge } from '../badge/Badge'
-import { Button } from '../button/Button'
+import { Badge } from '../../badge/Badge'
+import { Button } from '../../button/Button'
 
-export const Welcome = () => {
+interface IProps {
+    getStarted: () => void
+}
+
+export const Welcome: React.FC<IProps> = ({getStarted}) => {
     return (
         <div className={styles.signupMain}>
             <div className={styles.title}>Welcome to Edgevana</div>
@@ -24,7 +28,7 @@ export const Welcome = () => {
                 description="For companies and institutions who need access to our suite of tools and real-time insights to manage and run their operations. "
                 className={styles.secondBadge}
             />
-            <Button title="Get Started" onClick={() => {}}/>
+            <Button title="Get Started" onClick={getStarted}/>
             <p className={styles.linkText}>Already have an account? <a className={styles.link} href="#"> Sign in</a></p>
           </div>
     )
