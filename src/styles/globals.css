@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -61,11 +62,7 @@
     --occupancy-color: #EEF1FE;
   }
 
-  a {
-    text-decoration: none;
-    color: var(--primary-light);
-  }
-
-  a:hover {
-    color: var(--primary);
-  }
+ 
+li{
+    list-style-type: none; 
+}

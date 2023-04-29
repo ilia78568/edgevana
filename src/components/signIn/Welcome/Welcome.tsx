@@ -36,7 +36,7 @@ export const Welcome: React.FC<IProps> = ({getStarted}) => {
                 isActive={activeBadge === 'bussiness'}
             />
             <Button title="Get Started" onClick={getStarted}/>
-            <p className={styles.linkText}>Already have an account? <a className={styles.link} href="#"> Sign in</a></p>
+            <p className={styles.linkText}>Already have an account? <a className={styles.link} href="/"> Sign in</a></p>
           </div>
     )
 }

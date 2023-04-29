@@ -63,6 +63,13 @@
   text-align: center;
 }
 
+.linkRules {
+  text-decoration: none;
+  color: var(--primary-light);
+}
+
+
+
 @media(max-width: 1100px){
   .mainLeft {
     width: 100%;
