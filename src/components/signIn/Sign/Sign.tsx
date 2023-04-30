@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 import { Input } from '../../input/Input'
 import { Checkbox } from '../../checkbox/Checkbox'
 import { Button } from '../../button/Button'
 
 import styles from './Sign.module.css'
-import { useRouter } from 'next/router'
 
 const emailRegex = /^(.+)@(.+)$/iu;
 
@@ -143,13 +144,13 @@ export const Sign = () => {
                 checked={privacy}
                 label={
                     <p>I certify that I am 18 years of age or older, I agree to the to Edgevana`s &nbsp;
-                        <a className={styles.linkRules} href='/'>Terms of Use</a>
-                        , and i have read the <a className={styles.linkRules} >Privacy Policy</a>.
+                        <Link className={styles.linkRules} href='/'>Terms of Use</Link>
+                        , and i have read the <Link className={styles.linkRules} href={'/'} >Privacy Policy</Link>.
                     </p>
                 } 
             />
             <Button className={styles.btnSign} title='Sign Up' onClick={submitInfo} type='submit' disabled={!privacy}/>
-            <div className={styles.link} ><a className={styles.linkRules}  href='/'>Sign up</a> for business account</div>
+            <div className={styles.link} ><Link className={styles.linkRules}  href='/'>Sign up</Link> for business account</div>
           </form>
     )
 }

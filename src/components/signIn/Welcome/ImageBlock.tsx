@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import GeneralImage from '@/assets/images/signUp/generalInfo.png'
 import ChatsImage from '@/assets/images/signUp/Chats.png'
 import ArrowSvg from '@/assets/images/signUp/arrow.svg'
@@ -8,8 +10,8 @@ export const ImageBlock = () => {
     return (
         <div className={styles.mainRight}>
           <div className={styles.imagesBlock}>
-            <img src={GeneralImage.src} className={styles.mainRight__img1} />
-            <img src={ChatsImage.src} className={styles.mainRight__img2}/>
+            <Image src={GeneralImage} className={styles.mainRight__img1} alt='desktop'/>
+            <Image src={ChatsImage} className={styles.mainRight__img2} alt='mobile'/>
           </div>
           <div className={styles.acceleratingText}>
             <div>
@@ -19,10 +21,10 @@ export const ImageBlock = () => {
               </div>
               <div className={styles.acceleratingText__arrows}>
                 <div>
-                  <img src={ArrowSvg.src} className={styles.firstArrow}/>
+                  <Image src={ArrowSvg} className={styles.firstArrow} alt='arrow left'/>
                 </div>
                 <div>
-                  <img src={ArrowSvg.src} />
+                  <Image src={ArrowSvg} alt='arrow right'/>
                 </div>
               </div>
             </div>

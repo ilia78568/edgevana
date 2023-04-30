@@ -1,6 +1,7 @@
 
 import React, { useRef, useState } from 'react'
 import { Button } from '@/components/button/Button'
+import { QUESTIONS } from './questions'
 import styles from './SetupGuide.module.css'
 
 interface IQuestion {
@@ -10,32 +11,6 @@ interface IQuestion {
     value: string
     changeValue: any
 }
-
-const questions = [
-    {
-        id: '1',
-        main: 'How do you plan to use Edgevana? ',
-        answers: [
-            'High Performant Validator',
-            'Public Full Node Producer', 
-            'RPC (full program IDs)', 
-            'Web3 Developer', 
-            'Web2 Developer'
-        ]
-    },
-    {
-        id: '2',
-        main: 'Is this your first time trying to run a node? If not, where have you participated in the past?',
-        answers: [
-            'QuickNode',
-            'Amazon Managed Blockchain', 
-            'Azure Blockchain Workbench', 
-            'Alchemy', 
-            'Blockdaemon',
-            'This will be my first deployment!'
-        ]
-    }
-]
 
 export const SetupGuide: React.FC = () => {
     
@@ -54,18 +29,18 @@ export const SetupGuide: React.FC = () => {
         switch(questionNum) {
             case 1: {
                 return <Question
-                    id={questions[0].id} 
-                    main={questions[0].main} 
-                    answers={questions[0].answers} 
+                    id={QUESTIONS[0].id} 
+                    main={QUESTIONS[0].main} 
+                    answers={QUESTIONS[0].answers} 
                     value={first}
                     changeValue={setFirst}
                 />
             }
             case 2: {
                 return <Question
-                    id={questions[1].id} 
-                    main={questions[1].main} 
-                    answers={questions[1].answers} 
+                    id={QUESTIONS[1].id} 
+                    main={QUESTIONS[1].main} 
+                    answers={QUESTIONS[1].answers} 
                     value={second}
                     changeValue={setSecond}
                 />
@@ -102,7 +77,14 @@ const Question: React.FC<IQuestion> = ({id, main, answers, value, changeValue}) 
                 <div className={styles.list}>
                     {answers.map(elem => {
                         return <label className={styles.label + " " + (value === elem ? styles.selected : '')} key={elem}>
-                                <input checked={value === elem} className={styles.radio} onChange={() => changeValue(elem)} type='radio' name='question'/>{elem}
+                                <input 
+                                    checked={value === elem} 
+                                    className={styles.radio} 
+                                    onChange={() => changeValue(elem)} 
+                                    type='radio' 
+                                    name='question'
+                                />
+                                {elem}
                             </label>
                     })}
                 </div>

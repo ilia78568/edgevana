@@ -1,41 +1,39 @@
 .badge {
-    display: flex;
-    padding: 25px;
-    max-width: 400px;
+  display: flex;
+  padding: 25px;
+  max-width: 400px;
 
-    font-family: 'Inter';
-    font-weight: 400;
-    font-style: normal;
+  font-weight: 400;
 
-    border: 1.5px solid var(--primary-light);
-    border-radius: 8px;
+  border: 1.5px solid var(--primary-light);
+  border-radius: 8px;
 }
 
 .badgeText {
-    margin-left: 30px;
-    display: flex;
-    flex-direction: column;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--primary);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
 }
 .descr {
-    margin-top: 10px;
-    font-size: 14px;
+  margin-top: 10px;
 
-    color: var(--secondary);
-    line-height: 24px;
-    letter-spacing: 0.05em;
+  font-size: 14px;
+  color: var(--secondary);
+  line-height: 24px;
+  letter-spacing: 0.05em;
 }
 
 .badge:hover {
-    background: var(--grey);
-    cursor: pointer;
+  background: var(--grey);
+  cursor: pointer;
 }
 
 .active {
-    background: var(--grey);
+  background: var(--grey);
 }

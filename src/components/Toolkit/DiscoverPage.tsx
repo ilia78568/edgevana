@@ -5,9 +5,10 @@ import { usePathname } from 'next/navigation'
 import Discover from '@/assets/images/toolkit/discoverGray.svg'
 import SearchIcon from '@/assets/images/toolkit/search.svg'
 
-import styles from './DiscoverPage.module.css'
 import { SetupGuide } from './SetupGuide/SetupGuide'
 import { Button } from '../button/Button'
+
+import styles from './DiscoverPage.module.css'
 
 export const DiscoverPage: React.FC = () => {
     const pathname = usePathname();

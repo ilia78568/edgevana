@@ -1,27 +1,27 @@
 .discover {
-    width: 75%;
+  width: 75%;
 }
 .nav {
-    width: 25%;
+  width: 25%;
 }
 
 .main {
-    display: flex;
+  display: flex;
 }
 
 .menuMobile {
-    display: none;
+  display: none;
 }
 
 @media(max-width: 1100px){
-    .nav {
-      display: none;
-    }
-    .discover {
-        width: 100%;
-    }
-
-    .menuMobile {
-        display: block;
-    }
+  .nav {
+    display: none;
   }
+  .discover {
+    width: 100%;
+  }
+
+  .menuMobile {
+    display: block;
+  }
+}

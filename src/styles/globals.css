@@ -1,68 +1,69 @@
 * {
   margin: 0;
   box-sizing: border-box;
+
+  font-family: 'Inter';
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Inter";
-    font-weight: 400;
-    src: url("../assets/fonts/Inter-Regular.ttf") format("ttf");
-  }
-  
-  @font-face {
-    font-family: "Inter";
-    font-weight: 500;
-    src: url("../assets/fonts/Inter-Medium.ttf") format("ttf");
-  }
-  
-  @font-face {
-    font-family: "Inter";
-    font-weight: 600;
-    src: url("../assets/fonts/Inter-SemiBold.ttf") format("ttf");
-  }
-  
-  @font-face {
-    font-family: "Inter";
-    font-weight: 700;
-    src: url("../assets/fonts/Inter-Bold.ttf") format("ttf");
-  }
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("../assets/fonts/Inter-Regular.ttf") format("ttf");
+}
 
-  :root {
-    /* Skin Colors */
-    --primary: #151f4e;
-    --primary-light: #2b3e9b;
-    --secondary: #838aa9;
-    --secondary-500: #4b516a;
-    --white: #ffffff;
-    --light-grey: #f9f9fc;
-    --grey: #f3f4f9;
-    --grey-500: #dcdfef;
-    --grey-750: #b9bfd9;
-    --purple-light: #8686ea;
-    --subtabs-color: #e1e5fd;
-    --shadow-color: #e6e8ef;
-  
-    /* Status Colors */
-    --alert: #fd6b01;
-    --danger: #db4a46;
-    --success: #15a863;
-    --warning: #f7ba44;
-    --light-green-background: #ecfdf3;
-    --light-red-background: #fef3f2;
-    --light-yellow-background: #fff8e7;
-    --light-orange-background: #fff5f0;
-  
-    /* Chart Colors */
-    --skyblue: #2c7df7;
-    --parrot: #7afa11;
-    --pink: #dc1480;
-    --purple: #8752f3;
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  src: url("../assets/fonts/Inter-Medium.ttf") format("ttf");
+}
 
-    --arrow-color: #2B3E9B;
-    --occupancy-color: #EEF1FE;
-  }
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  src: url("../assets/fonts/Inter-SemiBold.ttf") format("ttf");
+}
 
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  src: url("../assets/fonts/Inter-Bold.ttf") format("ttf");
+}
+:root {
+  /* Skin Colors */
+  --primary: #151f4e;
+  --primary-light: #2b3e9b;
+  --secondary: #838aa9;
+  --secondary-500: #4b516a;
+  --white: #ffffff;
+  --white-sec: #F5F5F5;
+  --light-grey: #f9f9fc;
+  --grey: #f3f4f9;
+  --grey-500: #dcdfef;
+  --grey-750: #b9bfd9;
+  --purple-light: #8686ea;
+  --subtabs-color: #e1e5fd;
+  --shadow-color: #e6e8ef;
+
+  /* Status Colors */
+  --alert: #fd6b01;
+  --danger: #db4a46;
+  --success: #15a863;
+  --warning: #f7ba44;
+  --light-green-background: #ecfdf3;
+  --light-red-background: #fef3f2;
+  --light-yellow-background: #fff8e7;
+  --light-orange-background: #fff5f0;
+
+  /* Chart Colors */
+  --skyblue: #2c7df7;
+  --parrot: #7afa11;
+  --pink: #dc1480;
+  --purple: #8752f3;
+  --arrow-color: #2B3E9B;
+  --occupancy-color: #EEF1FE;
+}
  
-li{
+li {
     list-style-type: none; 
 }

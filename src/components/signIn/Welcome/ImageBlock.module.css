@@ -3,14 +3,12 @@
   position: relative;
   display: flex;
 }
-
 .mainRight__img1 {
   width: 730px;
   height: 568px;
   position: absolute;
+  left: 70px;
   z-index: 1;
-  left: 70px
-
 }
 .mainRight__img2 {
   width: 225px;
@@ -28,12 +26,9 @@
   align-items: flex-end;
   padding: 50px;
 
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 600;
   font-size: 22px;
   line-height: 27px;
-
   color: var(--primary);
 }
 
@@ -46,12 +41,9 @@
 }
 
 .acceleratingText__text > div:nth-child(2) {
-  font-family: 'Inter';
-  font-style: normal;
+  margin-top: 12px;
   font-weight: 400;
   font-size: 14px;
-
-  margin-top: 12px;
 }
 
 .acceleratingText__arrows {
@@ -61,11 +53,11 @@
 .acceleratingText__arrows div {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--primary-light);
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--primary-light);
   cursor: pointer;
 }
 

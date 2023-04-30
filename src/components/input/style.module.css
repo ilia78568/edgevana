@@ -1,46 +1,39 @@
 .label {
-    position: relative;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-
-    color: var(--primary);
+  position: relative;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--primary);
 }
 
 .input {
-    width: 100%;
+  width: 100%;
+  padding: 18px 17px;
+  margin-top: 8px;
 
-    background: var(--grey);
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    padding: 18px 17px;
-    box-sizing: border-box;
-    color: var(--secondary);
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
 
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-
-    margin-top: 8px;
+  background: var(--grey);
+  border-radius: 8px;
+  border: none;
+  outline: none;
 }
 
 .input::placeholder {
-    opacity: 0.5;
-    color: var(--secondary);
+  opacity: 0.5;
+  color: var(--secondary);
 }
 
 .passSvg {
-    position: absolute;
-    top: 75%;
-    left: 91%;
-    cursor: pointer;
+  position: absolute;
+  top: 75%;
+  left: 91%;
+  cursor: pointer;
 }
 
 .error {
-    border: 1px solid var(--danger)
+  border: 1px solid var(--danger)
 }

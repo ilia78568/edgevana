@@ -24,16 +24,12 @@
 
 .footer {
   padding-bottom: 30px;
-
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
 
   color: var(--secondary);
 }
-
 
 @media(max-width: 1100px){
   .mainLeft {

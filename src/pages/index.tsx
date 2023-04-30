@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
+import { Loader } from '@/components/loader/Loader';
+
 import styles from '@/styles/Home.module.css'
 
 export default function Home() {
@@ -13,11 +15,11 @@ export default function Home() {
     } else {
       push('/sign-up');
     }
-  }, []);
+  }, [push]);
 
   return (
     <main className={styles.main}>
-      <div className={styles.ldsRipple}><div></div><div></div></div>
+      <Loader />
     </main>
   )
 }

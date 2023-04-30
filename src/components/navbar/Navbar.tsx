@@ -4,12 +4,8 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/router'
 
-import NodesSvg from '@/assets/images/toolkit/Server.svg'
-import DashboardSvg from '@/assets/images/toolkit/dashboard.svg'
-import DiscoverSvg from '@/assets/images/toolkit/discover.svg'
-import EcosystemSvg from '@/assets/images/toolkit/ecosystem.svg'
-import TeamsSvg from '@/assets/images/toolkit/teams.svg'
-import AnalyticsSvg from '@/assets/images/toolkit/analytics.svg'
+import { LINKS } from './Links'
+
 import Logo from '@/assets/images/signUp/logo.svg'
 import User from '@/assets/images/toolkit/user.png'
 import LogoutSvg from '@/assets/images/toolkit/sign_out.svg'
@@ -24,39 +20,6 @@ interface ILinkComponent {
    svg: string
    isActive: boolean
 }
-
-const LINKS = [
-    {
-        src: '/',
-        title: 'Nodes',
-        svg: NodesSvg
-    },
-    {
-        src: '/',
-        title: 'Dashboard',
-        svg: DashboardSvg
-    },
-    {
-        src: '/',
-        title: 'Ecosystem',
-        svg: EcosystemSvg
-    },
-    {
-        src: '/',
-        title: 'Analytics',
-        svg: AnalyticsSvg
-    },
-    {
-        src: '/',
-        title: 'Teams',
-        svg: TeamsSvg
-    },
-    {
-        src: '/tool-kit',
-        title: 'Discover Web3',
-        svg: DiscoverSvg
-    },
-]
 
 export const Navbar: React.FC = () => {
     const pathname = usePathname();
@@ -97,11 +60,17 @@ export const Navbar: React.FC = () => {
                     <Image onClick={logout} alt='log out' src={LogoutSvg} className={styles.logOut}></Image>
                 </div>
                 <div className={styles.switcher}>
-                    <div onClick={() => setIsSwitch(true)} className={styles.switcher__light + ' ' + (isSwitch ? styles.switcher__active : '')}>
+                    <div
+                      onClick={() => setIsSwitch(true)} 
+                      className={styles.switcher__light + ' ' + (isSwitch ? styles.switcher__active : '')}
+                    >
                         <Image alt='' src={SunSvg} />
                         <span>Light</span>
                     </div>
-                    <div onClick={() => setIsSwitch(false)} className={styles.switcher__dark  + ' ' + (!isSwitch ? styles.switcher__active : '')}>
+                    <div 
+                      onClick={() => setIsSwitch(false)} 
+                      className={styles.switcher__dark  + ' ' + (!isSwitch ? styles.switcher__active : '')}
+                    >
                         <Image alt='' src={MoonSvg} />
                         <span>Dark</span>
                     </div>

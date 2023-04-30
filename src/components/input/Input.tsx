@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
+import Image from 'next/image'
+
 import PasswordSvg from '@/assets/images/signUp/password.svg'
+
 import styles from './style.module.css'
 
 interface IProps {
@@ -13,7 +16,9 @@ interface IProps {
     disableError?: () => void
 }
 
-export const Input: React.FC<IProps> = ({ disableError, isError, value, placeholder, onChange, label, type = 'text', className }) => {
+export const Input: React.FC<IProps> = (props) => {
+    
+    const {disableError, isError, value, placeholder, onChange, label, type = 'text', className} = props
     
     const [show, setShow] = useState(false)
     
@@ -35,7 +40,13 @@ export const Input: React.FC<IProps> = ({ disableError, isError, value, placehol
                  onChange={onChangeHandler} 
                  type={type === 'password' ? passType : type }
             />
-                {type === 'password' && <img onClick={() => setShow(!show)} className={styles.passSvg} src={PasswordSvg.src}></img>}
+                {type === 'password' && 
+                    <Image 
+                        onClick={() => setShow(!show)} 
+                        className={styles.passSvg} 
+                        src={PasswordSvg}
+                        alt='search icon'
+                    ></Image>}
             </label>
         </div>
     )
