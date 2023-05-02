@@ -104,6 +104,9 @@
   .input input {
       display: none;
   }
+  .search {
+    display: none;
+  }
 }
 
 @media(max-width: 730px){
