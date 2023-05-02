@@ -46,7 +46,7 @@ export const Sign = () => {
             setErrors(prev => ({...prev, lastName: true}))
             return
         }
-        if(!email || emailRegex.test(email)) {
+        if(!email || !emailRegex.test(email)) {
             setErrors(prev => ({...prev, email: true}))
             return
         }
