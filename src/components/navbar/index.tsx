@@ -51,8 +51,8 @@ export const Navbar: React.FC = () => {
             <div>
                 <div className={styles.user}>
                     <div className={styles.userBlock}>
-                        <Image className={styles.user__img} alt='user' src={User}></Image>
-                        <div className={styles.user__name}>
+                        <Image className={styles.userImg} alt='user' src={User}></Image>
+                        <div className={styles.userName}>
                             <p>Ryan Fay</p>
                             <p>ryanfay@edgevana.com</p>
                         </div>
@@ -62,14 +62,14 @@ export const Navbar: React.FC = () => {
                 <div className={styles.switcher}>
                     <div
                       onClick={() => setIsSwitch(true)} 
-                      className={styles.switcher__light + ' ' + (isSwitch ? styles.switcher__active : '')}
+                      className={styles.switcherLight + ' ' + (isSwitch ? styles.switcherActive : '')}
                     >
                         <Image alt='' src={SunSvg} />
                         <span>Light</span>
                     </div>
                     <div 
                       onClick={() => setIsSwitch(false)} 
-                      className={styles.switcher__dark  + ' ' + (!isSwitch ? styles.switcher__active : '')}
+                      className={styles.switcherDark  + ' ' + (!isSwitch ? styles.switcherActive : '')}
                     >
                         <Image alt='' src={MoonSvg} />
                         <span>Dark</span>

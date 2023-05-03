@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
-import { Loader } from '@/components/loader/Loader';
+import { Loader } from '@/components/loader';
 
 import styles from '@/styles/Home.module.css'
 

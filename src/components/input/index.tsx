@@ -7,7 +7,7 @@ import styles from './style.module.css'
 
 interface IProps {
     value: string
-    onChange: (e: any) => void
+    onChange: (e: string) => void
     label: string
     type?: string
     className?: string
@@ -24,7 +24,7 @@ export const Input: React.FC<IProps> = (props) => {
     
     const passType = (type === 'password' && !show) ? 'password' : 'text'
 
-    const onChangeHandler = (e: any) => {
+    const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         if(disableError) disableError()
         onChange(e.target.value)
     }

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
-import { Badge } from '../../badge/Badge'
-import { Button } from '../../button/Button'
+import { Badge } from '../../badge'
+import { Button } from '../../button'
 
 import IndividualSvg from '@/assets/images/signUp/ind.svg'
 import BusinessSvg from '@/assets/images/signUp/business.svg'

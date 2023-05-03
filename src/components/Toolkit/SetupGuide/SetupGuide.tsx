@@ -1,6 +1,6 @@
 
 import React, { useRef, useState } from 'react'
-import { Button } from '@/components/button/Button'
+import { Button } from '@/components/button'
 import { QUESTIONS } from './questions'
 import styles from './SetupGuide.module.css'
 
@@ -9,7 +9,7 @@ interface IQuestion {
     main: string
     answers: string[]
     value: string
-    changeValue: any
+    changeValue: (elem: string) => void
 }
 
 export const SetupGuide: React.FC = () => {
@@ -70,7 +70,7 @@ export const SetupGuide: React.FC = () => {
 const Question: React.FC<IQuestion> = ({id, main, answers, value, changeValue}) => {
     return (
         <div className={styles.questionsBlock}>
-                <div className={styles.questionsBlock__head}>
+                <div className={styles.questionsBlockHead}>
                     <div className={styles.circleId}>{id}</div>
                     <p>{main}</p>
                 </div>

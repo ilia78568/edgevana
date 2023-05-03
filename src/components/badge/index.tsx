@@ -3,7 +3,7 @@ import styles from './style.module.css'
 import Image from "next/image"
 
 interface IProps {
-    svg: any
+    svg: string
     title: string
     description: string
     onClick: () => void

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { ReactHTMLElement } from 'react'
 import styles from './style.module.css'
 
 interface IProps {
     onChange?: () => void
-    label: any
+    label: JSX.Element
     value: boolean
     checked: boolean
 }

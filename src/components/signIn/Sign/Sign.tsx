@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-import { Input } from '../../input/Input'
-import { Checkbox } from '../../checkbox/Checkbox'
-import { Button } from '../../button/Button'
+import { Input } from '../../input'
+import { Checkbox } from '../../checkbox'
+import { Button } from '../../button'
 
 import styles from './Sign.module.css'
 
@@ -33,7 +33,7 @@ export const Sign = () => {
     const filledTwo = filledOne && !!userName && !!email
     const fillefFull = filledOne && filledTwo && !!password
 
-    const submitInfo = async (e: any) => {
+    const submitInfo = async (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
         e.preventDefault()
 
         //validation

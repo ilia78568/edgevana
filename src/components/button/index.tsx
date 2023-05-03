@@ -5,7 +5,7 @@ interface IProps {
     title: string
     onClick: (e: React.MouseEvent<HTMLElement>) => void
     className?: string
-    type?: "button" | "submit" | "reset" | undefined
+    type?: "button" | "submit" | "reset"
     disabled?: boolean
 }
 

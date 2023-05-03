@@ -11,30 +11,6 @@
   justify-content: space-between;
 }
 
-.mainRight {
-  width: 50%;
-  position: relative;
-  display: flex;
-}
-
-.mainRight__img1 {
-  width: 730px;
-  height: 568px;
-  position: absolute;
-  z-index: 1;
-  left: 70px
-}
-.mainRight__img2 {
-  width: 225px;
-  height: 406px;
-  position: absolute;
-  top: 200px;
-  z-index: 2;
-}
-.imagesBlock {
-  margin-top: 50px;
-  position: relative;
-}
 .title {
   font-weight: 700;
   font-size: 26px;
@@ -56,17 +32,6 @@
   max-width: 400px;
 }
 
-.logoBlock {
-  display: flex;
-  width: 100%;
-  align-items: flex-start;
-}
-.logo {
-  margin: 24px;
-  height: 38px;
-  width: 171px;
-}
-
 .secondBadge {
   margin: 20px 0 40px 0;
 }
@@ -86,16 +51,6 @@
   line-height: 18px;
   color: var(--secondary);
   margin-top: 30px;
-}
-
-.footer {
-  padding-bottom: 30px;
-
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-
-  color: var(--secondary);
 }
 
 @media(max-width: 1100px){

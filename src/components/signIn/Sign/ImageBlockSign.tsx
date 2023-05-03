@@ -10,10 +10,10 @@ export const ImageBlockSign = () => {
     return (
         <div className={styles.mainRight}>
           <h2 className={styles.header}>Earn free crypto after making your first purchase.</h2>
-          <p className={styles.header__link}>*The average Edgevana operator earns $950 a month in incentives.<Link className={styles.linkRules} href='/'>See terms</Link></p>
+          <p className={styles.headerLink}>*The average Edgevana operator earns $950 a month in incentives.<Link className={styles.linkRules} href='/'>See terms</Link></p>
           <div className={styles.imagesBlock}>
-            <Image src={GeneralImage} className={styles.mainRight__img1} alt='desktop' />
-            <Image src={ChatsImage} className={styles.mainRight__img2} alt='chats'/>
+            <Image src={GeneralImage} className={styles.mainRightImg1} alt='desktop' />
+            <Image src={ChatsImage} className={styles.mainRightImg2} alt='chats'/>
           </div>
         </div>
     )

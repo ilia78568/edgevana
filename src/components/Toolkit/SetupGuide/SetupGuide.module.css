@@ -105,13 +105,13 @@
   background: linear-gradient(267.08deg, #2B3E9B -4.96%, #1E328E 100%), #FFFFFF;
 }
 
-.questionsBlock__head {
+.questionsBlockHead {
   display: flex;
   align-items: center;
   margin-bottom: 45px;
 
 }
-.questionsBlock__head p {
+.questionsBlockHead p {
   max-width: 530px;
   margin-left: 20px;
   font-weight: 600;
@@ -134,7 +134,7 @@
     margin-right: 10px;
   }
 
-  .questionsBlock__head p {
+  .questionsBlockHead p {
     font-size: 14px;
     line-height: 20px;
     margin-left: 4px;

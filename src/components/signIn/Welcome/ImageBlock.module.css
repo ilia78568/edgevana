@@ -3,14 +3,14 @@
   position: relative;
   display: flex;
 }
-.mainRight__img1 {
+.mainRightImg1 {
   width: 730px;
   height: 568px;
   position: absolute;
   left: 70px;
   z-index: 1;
 }
-.mainRight__img2 {
+.mainRightImg2 {
   width: 225px;
   height: 406px;
   position: absolute;
@@ -35,22 +35,22 @@
 .acceleratingText > div:nth-child(1) {
   display: flex;
 }
-.acceleratingText__text {
+.acceleratingTextText {
   display: flex;
   flex-direction: column;
 }
 
-.acceleratingText__text > div:nth-child(2) {
+.acceleratingTextText > div:nth-child(2) {
   margin-top: 12px;
   font-weight: 400;
   font-size: 14px;
 }
 
-.acceleratingText__arrows {
+.acceleratingTextArrows {
   display: flex;
 }
 
-.acceleratingText__arrows div {
+.acceleratingTextArrows div {
   width: 40px;
   height: 40px;
   display: flex;
@@ -61,7 +61,7 @@
   cursor: pointer;
 }
 
-.acceleratingText__arrows div:nth-child(1) {
+.acceleratingTextArrows div:nth-child(1) {
   border: 1px solid var(--secondary-500);
   margin-right: 10px;
 }

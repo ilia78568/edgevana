@@ -1,6 +1,6 @@
 import styles from '@/styles/ToolKit.module.css'
-import { Navbar } from '@/components/navbar/Navbar';
-import { DiscoverPage } from '@/components/Toolkit/DiscoverPage';
+import { Navbar } from '@/components/navbar';
+import { DiscoverPage } from '@/components/Toolkit/DiscoverPage/DiscoverPage';
 
 export default function ToolKit() {
     

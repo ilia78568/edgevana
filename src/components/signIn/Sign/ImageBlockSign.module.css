@@ -16,18 +16,18 @@
   text-align: center;
 }
 
-.header__link {
+.headerLink {
   margin-top: 20px;
   font-weight: 400;
   font-size: 14px;
   color: var(--secondary);
   text-align: center;
 }
-.mainRight__img1 {
+.mainRightImg1 {
   width: 625px;
   height: 411px;
 }
-.mainRight__img2 {
+.mainRightImg2 {
   width: 158px;
   height: 314px;
   position: absolute;

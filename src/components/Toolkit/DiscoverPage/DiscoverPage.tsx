@@ -5,10 +5,12 @@ import { usePathname } from 'next/navigation'
 import Discover from '@/assets/images/toolkit/discoverGray.svg'
 import SearchIcon from '@/assets/images/toolkit/search.svg'
 
-import { SetupGuide } from './SetupGuide/SetupGuide'
-import { Button } from '../button/Button'
+import { SetupGuide } from '../SetupGuide/SetupGuide'
+import { Button } from '../../button'
 
 import styles from './DiscoverPage.module.css'
+import { LINKS } from './links'
+import { link } from 'fs'
 
 export const DiscoverPage: React.FC = () => {
     const pathname = usePathname();
@@ -33,12 +35,9 @@ export const DiscoverPage: React.FC = () => {
                 </div>
             </div>
             <div className={styles.nav}>
-                <Link className={(pathname === '/') ? styles.activeLink : '' } href={'/'}>Overview</Link>
-                <Link className={(pathname === '/') ? styles.activeLink : '' } href={'/'}>Projects</Link>
-                <Link className={(pathname === '/') ? styles.activeLink : '' } href={'/'}>Events</Link>
-                <Link className={(pathname === '/') ? styles.activeLink : '' } href={'/'}>News</Link>
-                <Link className={(pathname === '/') ? styles.activeLink : '' } href={'/'}>Developer Toolkit</Link>
-                <Link className={(pathname === '/tool-kit') ? styles.activeLink : '' } href={'/tool-kit'}>Entrepreneur Toolkit</Link>
+                {LINKS.map(link => {
+                    return <Link className={(pathname === link.href) ? styles.activeLink : '' } href={link.href}>{link.label}</Link>
+                })}
             </div>
             <div className={styles.setupBlock}>
                 <SetupGuide />
