@@ -36,7 +36,7 @@ export const DiscoverPage: React.FC = () => {
             </div>
             <div className={styles.nav}>
                 {LINKS.map(link => {
-                    return <Link className={(pathname === link.href) ? styles.activeLink : '' } href={link.href}>{link.label}</Link>
+                    return <Link className={(pathname === link.href) ? styles.activeLink : '' } href={link.href} key={link.id}>{link.label}</Link>
                 })}
             </div>
             <div className={styles.setupBlock}>
