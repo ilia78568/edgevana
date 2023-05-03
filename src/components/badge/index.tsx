@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
+import Image from 'next/image'
 import styles from './style.module.css'
-import Image from "next/image"
 
 interface IProps {
     svg: string
@@ -11,11 +11,11 @@ interface IProps {
     isActive?: boolean
 }
 
-export const Badge: React.FC<IProps> = ({svg, title, description, onClick, className, isActive}) => {
+export const Badge: React.FC<IProps> = ({ svg, title, description, onClick, className, isActive }) => {
     return (
-        <div className={styles.badge + ' ' + className + " " + (isActive ? styles.active : '')} onClick={onClick}>
+        <div className={styles.badge + ' ' + className + ' ' + (isActive ? styles.active : '')} onClick={onClick}>
             <div>
-                <Image src={svg} alt="badge"></Image>
+                <Image src={svg} alt="badge" />
             </div>
             <div className={styles.badgeText}>
                 <div className={styles.title}>{title}</div>

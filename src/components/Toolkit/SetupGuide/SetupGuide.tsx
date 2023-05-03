@@ -1,7 +1,9 @@
 
 import React, { useRef, useState } from 'react'
+
 import { Button } from '@/components/button'
 import { QUESTIONS } from './questions'
+
 import styles from './SetupGuide.module.css'
 
 interface IQuestion {
@@ -13,7 +15,7 @@ interface IQuestion {
 }
 
 export const SetupGuide: React.FC = () => {
-    
+
     const [questionNum, setQuestionNum] = useState(1)
     const [first, setFirst] = useState('High Performant Validator')
     const [second, setSecond] = useState('QuickNode')
@@ -26,21 +28,21 @@ export const SetupGuide: React.FC = () => {
     }
 
     const renderQuestion = () => {
-        switch(questionNum) {
+        switch (questionNum) {
             case 1: {
                 return <Question
-                    id={QUESTIONS[0].id} 
-                    main={QUESTIONS[0].main} 
-                    answers={QUESTIONS[0].answers} 
+                    id={QUESTIONS[0].id}
+                    main={QUESTIONS[0].main}
+                    answers={QUESTIONS[0].answers}
                     value={first}
                     changeValue={setFirst}
                 />
             }
             case 2: {
                 return <Question
-                    id={QUESTIONS[1].id} 
-                    main={QUESTIONS[1].main} 
-                    answers={QUESTIONS[1].answers} 
+                    id={QUESTIONS[1].id}
+                    main={QUESTIONS[1].main}
+                    answers={QUESTIONS[1].answers}
                     value={second}
                     changeValue={setSecond}
                 />
@@ -56,7 +58,7 @@ export const SetupGuide: React.FC = () => {
                 <p className={styles.subtitle}>{questionNum - 1}/7 Questions answered</p>
             </div>
             <div className={styles.occupancy}>
-                <div style={{width: `${(100/7) * questionNum}%`}} ></div>
+                <div style={{ width: `${(100 / 7) * questionNum}%` }} ></div>
             </div>
             {renderQuestion()}
             <div className={styles.buttons}>
@@ -67,27 +69,27 @@ export const SetupGuide: React.FC = () => {
     )
 }
 
-const Question: React.FC<IQuestion> = ({id, main, answers, value, changeValue}) => {
+const Question: React.FC<IQuestion> = ({ id, main, answers, value, changeValue }) => {
     return (
         <div className={styles.questionsBlock}>
-                <div className={styles.questionsBlockHead}>
-                    <div className={styles.circleId}>{id}</div>
-                    <p>{main}</p>
-                </div>
-                <div className={styles.list}>
-                    {answers.map(elem => {
-                        return <label className={styles.label + " " + (value === elem ? styles.selected : '')} key={elem}>
-                                <input 
-                                    checked={value === elem} 
-                                    className={styles.radio} 
-                                    onChange={() => changeValue(elem)} 
-                                    type='radio' 
-                                    name='question'
-                                />
-                                {elem}
-                            </label>
-                    })}
-                </div>
-            </div>  
+            <div className={styles.questionsBlockHead}>
+                <div className={styles.circleId}>{id}</div>
+                <p>{main}</p>
+            </div>
+            <div className={styles.list}>
+                {answers.map(elem => {
+                    return <label className={styles.label + " " + (value === elem ? styles.selected : '')} key={elem}>
+                        <input
+                            checked={value === elem}
+                            className={styles.radio}
+                            onChange={() => changeValue(elem)}
+                            type='radio'
+                            name='question'
+                        />
+                        {elem}
+                    </label>
+                })}
+            </div>
+        </div>
     )
 }

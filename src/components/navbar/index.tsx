@@ -15,10 +15,11 @@ import MoonSvg from '@/assets/images/toolkit/moon.svg'
 import styles from './style.module.css'
 
 interface ILinkComponent {
-   src: string
-   title: string
-   svg: string
-   isActive: boolean
+    src: string
+    title: string
+    svg: string
+    isActive: boolean
+    pushToLink: (src: string) => void
 }
 
 export const Navbar: React.FC = () => {
@@ -26,24 +27,29 @@ export const Navbar: React.FC = () => {
     const { push } = useRouter();
 
     const [isSwitch, setIsSwitch] = useState(true)
-    
+
+    const pushToLink = (src: string) => {
+        push(src)
+    }
+
     const logout = () => {
         localStorage.removeItem('login')
         push('/sign-up');
     }
-    
+
     return (
         <div className={styles.nav}>
             <div>
-                <Image src={Logo} alt=''/>
+                <Image src={Logo} alt='' />
                 <ul className={styles.ul}>
                     {LINKS.map(elem => {
-                        return <LinkComponent 
-                            src={elem.src} 
-                            title={elem.title} 
+                        return <LinkComponent
+                            src={elem.src}
+                            title={elem.title}
                             key={elem.title}
                             svg={elem.svg}
                             isActive={pathname === elem.src}
+                            pushToLink={pushToLink}
                         />
                     })}
                 </ul>
@@ -51,25 +57,25 @@ export const Navbar: React.FC = () => {
             <div>
                 <div className={styles.user}>
                     <div className={styles.userBlock}>
-                        <Image className={styles.userImg} alt='user' src={User}></Image>
+                        <Image className={styles.userImg} alt='user' src={User} />
                         <div className={styles.userName}>
                             <p>Ryan Fay</p>
                             <p>ryanfay@edgevana.com</p>
                         </div>
                     </div>
-                    <Image onClick={logout} alt='log out' src={LogoutSvg} className={styles.logOut}></Image>
+                    <Image onClick={logout} alt='log out' src={LogoutSvg} className={styles.logOut} />
                 </div>
                 <div className={styles.switcher}>
                     <div
-                      onClick={() => setIsSwitch(true)} 
-                      className={styles.switcherLight + ' ' + (isSwitch ? styles.switcherActive : '')}
+                        onClick={() => setIsSwitch(true)}
+                        className={styles.switcherLight + ' ' + (isSwitch ? styles.switcherActive : '')}
                     >
                         <Image alt='' src={SunSvg} />
                         <span>Light</span>
                     </div>
-                    <div 
-                      onClick={() => setIsSwitch(false)} 
-                      className={styles.switcherDark  + ' ' + (!isSwitch ? styles.switcherActive : '')}
+                    <div
+                        onClick={() => setIsSwitch(false)}
+                        className={styles.switcherDark + ' ' + (!isSwitch ? styles.switcherActive : '')}
                     >
                         <Image alt='' src={MoonSvg} />
                         <span>Dark</span>
@@ -80,12 +86,11 @@ export const Navbar: React.FC = () => {
     )
 }
 
-const LinkComponent = ({src, title, svg, isActive}: ILinkComponent) => {
-    const { push } = useRouter();
+const LinkComponent = ({ src, title, svg, isActive, pushToLink }: ILinkComponent) => {
     return (
-        <li className={styles.li + ' ' + (isActive? styles.active : '')} onClick={() => push(src)}>
-            <Image className={styles.image} alt='' src={svg}/>
-            <Link className={styles.title + ' ' + (isActive? styles.activeLink : '') } href={src}>{title}</Link>
-       </li>
+        <li className={styles.li + ' ' + (isActive ? styles.active : '')} onClick={() => pushToLink(src)}>
+            <Image className={styles.image} alt='' src={svg} />
+            <Link className={styles.title + ' ' + (isActive ? styles.activeLink : '')} href={src}>{title}</Link>
+        </li>
     )
 }

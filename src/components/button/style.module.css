@@ -19,6 +19,7 @@
 }
 
 .disabled {
-  background: var(--purple-light);
+  background: var( --button-disabled-color);
+  color: var(--button-disabled-text-color);
   cursor: initial;
 }

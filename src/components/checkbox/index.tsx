@@ -1,4 +1,4 @@
-import React, { ReactHTMLElement } from 'react'
+import React from 'react'
 import styles from './style.module.css'
 
 interface IProps {
@@ -11,10 +11,8 @@ interface IProps {
 export const Checkbox: React.FC<IProps> = ({ value, onChange, label }) => {
     return (
         <label className={styles.block}>
-            <input checked={value} className={styles.checkbox} onChange={onChange} type="checkbox"/>
-            <div className={styles.label}>
-                {label}
-            </div>
+            <input checked={value} className={styles.checkbox} onChange={onChange} type="checkbox" />
+            <div className={styles.label}>{label}</div>
         </label>
     )
 }

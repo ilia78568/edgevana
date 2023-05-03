@@ -6,9 +6,9 @@ import { Input } from '../../input'
 import { Checkbox } from '../../checkbox'
 import { Button } from '../../button'
 
-import styles from './Sign.module.css'
+import { validateSign } from '@/utils/validation'
 
-const emailRegex = /^(.+)@(.+)$/iu;
+import styles from './Sign.module.css'
 
 export const Sign = () => {
 
@@ -36,26 +36,7 @@ export const Sign = () => {
     const submitInfo = async (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
         e.preventDefault()
 
-        //validation
-        if(!firstName) {
-            setErrors(prev => ({...prev, firstName: true}))
-            return
-        }
-
-        if(!lastName) {
-            setErrors(prev => ({...prev, lastName: true}))
-            return
-        }
-        if(!email || !emailRegex.test(email)) {
-            setErrors(prev => ({...prev, email: true}))
-            return
-        }
-        if(!userName) {
-            setErrors(prev => ({...prev, userName: true}))
-            return
-        }
-        if(!password || password.length < 6) {
-            setErrors(prev => ({...prev, password: true}))
+        if (validateSign(firstName, lastName, userName, email, password, setErrors)) {
             return
         }
 
@@ -66,13 +47,13 @@ export const Sign = () => {
         const res = await fetch(`http://localhost:3000/api/signup`, {
             method: "POST",
             body: JSON.stringify(data)
-        } );
+        });
 
         const answ = await res.json();
 
         if (answ.message) {
             alert(answ.message)
-            localStorage.setItem('login', JSON.stringify({userName, email}))
+            localStorage.setItem('login', JSON.stringify({ userName, email }))
             router.push('/tool-kit')
         }
     }
@@ -83,62 +64,61 @@ export const Sign = () => {
             <div className={styles.subtitle}>Create your account</div>
             <div className={styles.blockInputs}>
                 <Input
-                    label={'First Name'} 
-                    onChange={setFirstName} 
+                    label={'First Name'}
+                    onChange={setFirstName}
                     value={firstName}
                     type='text'
                     placeholder='First Name'
                     isError={errors.firstName}
-                    disableError={() => setErrors(prev => ({...prev, firstName: false}))}
+                    disableError={() => setErrors(prev => ({ ...prev, firstName: false }))}
                 />
                 <Input
-                    label={'Last Name'} 
-                    onChange={setLastName} 
+                    label={'Last Name'}
+                    onChange={setLastName}
                     value={lastName}
                     type='text'
                     className={styles.lastName}
                     placeholder='Last Name'
                     isError={errors.lastName}
-                    disableError={() => setErrors(prev => ({...prev, lastName: false}))}
+                    disableError={() => setErrors(prev => ({ ...prev, lastName: false }))}
                 />
             </div>
-            <Input 
-                label={'Username'} 
-                onChange={setUserName} 
-                value={userName} 
+            <Input
+                label={'Username'}
+                onChange={setUserName}
+                value={userName}
                 className={styles.userName}
                 type='text'
                 placeholder='Username'
                 isError={errors.userName}
-                disableError={() => setErrors(prev => ({...prev, userName: false}))}
+                disableError={() => setErrors(prev => ({ ...prev, userName: false }))}
             />
-            <Input 
-                label={'Email'} 
-                onChange={setEmail} 
-                value={email} 
+            <Input
+                label={'Email'}
+                onChange={setEmail}
+                value={email}
                 className={styles.email}
                 type='email'
                 placeholder='Email'
                 isError={errors.email}
-                disableError={() => setErrors(prev => ({...prev, email: false}))}
+                disableError={() => setErrors(prev => ({ ...prev, email: false }))}
             />
-            <Input 
-                label={'Password'} 
-                onChange={setPassword} 
-                value={password} 
-                type='password' 
+            <Input
+                label={'Password'}
+                onChange={setPassword}
+                value={password}
+                type='password'
                 placeholder='******'
                 className={styles.password}
                 isError={errors.password}
-                disableError={() => setErrors(prev => ({...prev, password: false}))}
+                disableError={() => setErrors(prev => ({ ...prev, password: false }))}
             />
             <div className={styles.occupancyBlock}>
                 <div className={filledOne ? styles.filled : ''}></div>
                 <div className={filledTwo ? styles.filled : ''}></div>
                 <div className={fillefFull ? styles.filled : ''}></div>
             </div>
-
-            <Checkbox 
+            <Checkbox
                 value={privacy}
                 onChange={() => setPrivacy(!privacy)}
                 checked={privacy}
@@ -147,10 +127,13 @@ export const Sign = () => {
                         <Link className={styles.linkRules} href='/'>Terms of Use</Link>
                         , and i have read the <Link className={styles.linkRules} href={'/'} >Privacy Policy</Link>.
                     </p>
-                } 
+                }
             />
-            <Button className={styles.btnSign} title='Sign Up' onClick={submitInfo} type='submit' disabled={!privacy}/>
-            <div className={styles.link} ><Link className={styles.linkRules}  href='/'>Sign up</Link> for business account</div>
-          </form>
+            <Button className={styles.btnSign} title='Sign Up' onClick={submitInfo} type='submit' disabled={!privacy} />
+            <div className={styles.link}>
+                <Link className={styles.linkRules} href='/'>Sign up</Link>&nbsp;
+                for business account
+            </div>
+        </form>
     )
 }

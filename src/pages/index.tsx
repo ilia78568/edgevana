@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     const item = localStorage.getItem('login')
-    if(item) {
+    if (item) {
       push('/tool-kit');
     } else {
       push('/sign-up');

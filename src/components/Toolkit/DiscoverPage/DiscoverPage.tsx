@@ -7,10 +7,9 @@ import SearchIcon from '@/assets/images/toolkit/search.svg'
 
 import { SetupGuide } from '../SetupGuide/SetupGuide'
 import { Button } from '../../button'
+import { LINKS } from './links'
 
 import styles from './DiscoverPage.module.css'
-import { LINKS } from './links'
-import { link } from 'fs'
 
 export const DiscoverPage: React.FC = () => {
     const pathname = usePathname();
@@ -19,7 +18,7 @@ export const DiscoverPage: React.FC = () => {
             <div className={styles.header}>
                 <div className={styles.firstBlock}>
                     <div className={styles.circle}>
-                        <Image src={Discover}  alt=''></Image>
+                        <Image src={Discover} alt=''></Image>
                     </div>
                     <div className={styles.name}>
                         <h3>Discover Web3</h3>
@@ -28,21 +27,21 @@ export const DiscoverPage: React.FC = () => {
                 </div>
                 <div className={styles.input}>
                     <div className={styles.menuMobile}>
-                        <Button title='Open Menu' onClick={() => {}}></Button>
+                        <Button title='Open Menu' onClick={() => { }}></Button>
                     </div>
-                    <input type='text' disabled placeholder='Search'/>
-                    <Image className={styles.search} src={SearchIcon} alt=''/>
+                    <input type='text' disabled placeholder='Search' />
+                    <Image className={styles.search} src={SearchIcon} alt='' />
                 </div>
             </div>
             <div className={styles.nav}>
                 {LINKS.map(link => {
-                    return <Link className={(pathname === link.href) ? styles.activeLink : '' } href={link.href} key={link.id}>{link.label}</Link>
+                    return <Link className={(pathname === link.href) ? styles.activeLink : ''} href={link.href} key={link.id}>{link.label}</Link>
                 })}
             </div>
             <div className={styles.setupBlock}>
                 <SetupGuide />
             </div>
-            
+
         </div>
     )
 }

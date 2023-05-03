@@ -36,6 +36,8 @@
   --purple-light: #8686ea;
   --subtabs-color: #e1e5fd;
   --shadow-color: #e6e8ef;
+  --button-disabled-color: #dcdfef;
+  --button-disabled-text-color: #838aa9;
 
   /* Status Colors */
   --alert: #fd6b01;

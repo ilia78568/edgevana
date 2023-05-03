@@ -11,10 +11,10 @@ interface IProps {
 
 export const Button: React.FC<IProps> = ({ title, onClick, className, type, disabled }) => {
     return (
-        <button 
-            type={type} 
-            className={styles.button + ' ' + className + ' ' + (disabled ? styles.disabled : '')} 
-            onClick={onClick} 
+        <button
+            type={type}
+            className={styles.button + ' ' + className + ' ' + (disabled ? styles.disabled : '')}
+            onClick={onClick}
             disabled={disabled}
         >
             {title}

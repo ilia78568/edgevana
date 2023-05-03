@@ -17,15 +17,15 @@ interface IProps {
 }
 
 export const Input: React.FC<IProps> = (props) => {
-    
-    const {disableError, isError, value, placeholder, onChange, label, type = 'text', className} = props
-    
+
+    const { disableError, isError, value, placeholder, onChange, label, type = 'text', className } = props
+
     const [show, setShow] = useState(false)
-    
+
     const passType = (type === 'password' && !show) ? 'password' : 'text'
 
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if(disableError) disableError()
+        if (disableError) disableError()
         onChange(e.target.value)
     }
 
@@ -34,19 +34,20 @@ export const Input: React.FC<IProps> = (props) => {
             <label className={styles.label}>
                 {label}
                 <input
-                 className={styles.input + " " + (isError ? styles.error : '')} 
-                 value={value} 
-                 placeholder={placeholder}
-                 onChange={onChangeHandler} 
-                 type={type === 'password' ? passType : type }
-            />
-                {type === 'password' && 
-                    <Image 
-                        onClick={() => setShow(!show)} 
-                        className={styles.passSvg} 
+                    className={styles.input + " " + (isError ? styles.error : '')}
+                    value={value}
+                    placeholder={placeholder}
+                    onChange={onChangeHandler}
+                    type={type === 'password' ? passType : type}
+                />
+                {type === 'password' &&
+                    <Image
+                        onClick={() => setShow(!show)}
+                        className={styles.passSvg}
                         src={PasswordSvg}
                         alt='search icon'
-                    ></Image>}
+                    />
+                }
             </label>
         </div>
     )
